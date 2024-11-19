@@ -10,6 +10,10 @@ public class User extends AbstractEntity {
 
     private String pwHash;
 
+    // Default no-argument constructor (needed by Hibernate)
+    public User() {
+    }
+
     public User(String username, String password) {
         this.username = username;
         this.pwHash = encoder.encode(password);

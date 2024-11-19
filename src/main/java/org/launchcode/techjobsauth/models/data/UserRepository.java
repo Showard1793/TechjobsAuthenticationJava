@@ -8,5 +8,5 @@ import org.springframework.stereotype.Repository;
 public interface UserRepository extends CrudRepository<User, Integer>{
 
     //custom query method
-    User getbyUsername(String username);
+    User findByUsername(String username);
 }
