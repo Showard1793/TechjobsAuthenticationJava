@@ -1,11 +1,13 @@
 package org.launchcode.techjobsauth.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Entity
 public class User extends AbstractEntity {
 
+    @Column(unique = true) // Ensures database-level uniqueness
     private String username;
 
     private String pwHash;
