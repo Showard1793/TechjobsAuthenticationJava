@@ -7,7 +7,7 @@
 <div th:replace="fragments :: page-header"></div>
 
 <div class="container body-content">
-    <h2>Sign Up</h2>
+    <h2>Register</h2>
 
     <form method="post">
         <div class="form-group">
@@ -25,7 +25,7 @@
         <div class="form-group">
             <label>Verify Password
                 <input class="form-control" th:field="${registrationFormDTO.verifyPassword}" type="password" />
-                <p class="error" th:errors="${registrationFormDTO.password}"></p>
+                <p class="error" th:errors="${registrationFormDTO.verifyPassword}"></p>
             </label>
         </div>
 

@@ -21,9 +21,15 @@ public class User extends AbstractEntity {
         this.pwHash = encoder.encode(password);
     }
 
+    public String getUsername() {
+        return username;
+    }
+
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
     public boolean isMatchingPassword(String password){
         return encoder.matches(password, pwHash);
     }
+
+
 }
